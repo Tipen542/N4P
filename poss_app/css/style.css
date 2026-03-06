@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #111; /* background default untuk semua halaman */
+    color: white;
+}
+
+
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: rgba(0, 0, 0, 0.25); /* transparan tipis */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav .logo img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #aaa;
+}
+
+.nav-buttons a {
+    padding: 10px 22px;
+    border-radius: 50px;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.nav-buttons a:hover {
+    background: white;
+    color: black;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255,255,255,0.4);
+}
+
+/* HERO */
+.hero {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: transparent;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: hsl(0, 0%, 0%);
+}
+
+/* CARD */
+.card {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 30px auto;
+    width: 90%;
+    box-shadow: 0 5px 20px rgba(255,255,255,0.05);
+}
+
+/* FORM */
+input, button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+}
+
+input {
+    background: #111;
+    color: #fff;
+    border: 1px solid #333;
+}
+
+button {
+    background: #fff;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ccc;
+}
+
+/* PRODUCT GRID */
+.products {
+    margin-top: 120px;
+    padding: 40px 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: #1a1a1a;
+    border-radius: 20px;
+    padding: 20px;
+    transition: 0.4s;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255,255,255,0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.product-card p {
+    color: #aaa;
+    margin-bottom: 10px;
+}
+
+.product-card h4 {
+    font-size: 18px;
+    color: white;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255,255,255,0.1);
+}
+
+.shop-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 35px;
+    border-radius: 50px;
+    background: white;
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.shop-btn:hover {
+    background: black;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.home-bg {
+    background: url('../assets/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Scrollbar Chrome, Edge */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+}
+
+/* Firefox */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: white #111;
+}
+
+/* ===== LOGIN ERROR MODERN ===== */
+.alert-error {
+    background: linear-gradient(135deg, #ff4d4d, #cc0000);
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+    animation: fadeSlide 0.4s ease;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
